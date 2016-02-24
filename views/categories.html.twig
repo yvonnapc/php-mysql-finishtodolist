@@ -1,29 +1,33 @@
 <html>
 <head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/styles.css'>
     <title>To Do List</title>
 </head>
 <body>
-    <h1>Categories</h1>
+    <div class='container'>
+        <h1>Categories</h1>
 
-    {% if categories is not empty %}
-        <p>Here are all your categories:</p>
-        <ul>
-            {% for category in categories %}
-                <li>{{ category.getName }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+        {% if categories is not empty %}
+            <p>Here are all your categories:</p>
+            <ul>
+                {% for category in categories %}
+                    <li>{{ category.getName }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
 
-    <form action='/categories' method='post'>
-        <label for='name'>Category name</label>
-        <input id='name' name='name' type='text'>
+        <form action='/categories' method='post'>
+            <label for='name'>Category name</label>
+            <input id='name' name='name' type='text'>
 
-        <button type='submit'>Add category</button>
-    </form>
-    <form action='/delete_categories' method='post'>
-        <button type='submit'>Clear</button>
-    </form>
+            <button type='submit'>Add category</button>
+        </form>
+        <form action='/delete_categories' method='post'>
+            <button type='submit'>Clear</button>
+        </form>
 
-    <p><a href='/'>Home</a></p>
+        <p><a href='/'>Home</a></p>
+    </div>
 </body>
 </html>
