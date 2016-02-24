@@ -22,10 +22,6 @@
     return $app['twig']->render('tasks.html.twig', array('tasks' => Task::getAll()));
     });
 
-    // $app->get("/categories", function() use($app){
-    //   return $app['twig']->render('categories.html.twig', array('categories' => Category::getAll()));
-    // });
-
     $app->get("/categories/{id}", function($id) use ($app) {
       $category = Category::find($id);
     return $app['twig']->render('category.html.twig', array('category' => $category, 'tasks' => $category->getTasks()));
