@@ -1,6 +1,6 @@
 #_To-Do List_
 
-#### Pt2: A to-do list app using MySQL | February 22, 2016
+#### Pt2: A to-do list app using MySQL | February 23, 2016
 
 #### By Yvonna Contreras & Erik Tolentino
 
